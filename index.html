@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Vowel counter</title>
+	</head>
+	<body>
+		<script>
+			const calculate = (text) => (document.querySelector('.vowel-count').innerHTML = (text.match(/[aeiou]/g) || []).length);
+		</script>
+		<textarea class="input" cols="30" rows="10" placeholder="Enter your text here:"></textarea>
+		<div>
+			<button onclick="calculate(document.querySelector('.input').value.toLowerCase())">Calculate</button>
+			<p>Vowel count: <span class="vowel-count">0</span></p>
+		</div>
+	</body>
+</html>
